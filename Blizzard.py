@@ -107,7 +107,7 @@ class Hasher:
         return byte4 ^ (self.__rotr((~byte1 | byte3), 5) & 0xFF ^ byte2)
 
     def __wf1(self, vector: bytes):
-        """One of three functions that modify the 8 byte word vectors in a someone linear fashion."""
+        """One of three functions that modify the 8 byte word vectors in a somewhat linear fashion."""
         v_temp: bytes = b""
         v_temp += bytes([self.__rotr(vector[0] ^ vector[7], 1)])
         v_temp += bytes([vector[0] ^ vector[1]])
